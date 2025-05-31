@@ -21,20 +21,7 @@ labels = [
     "selamat tinggal",
     "selamat tinggal"
 ]
-
-inputs += [
-  preprocess_text("aku suka eskrim"),
-  preprocess_text("kamu suka eskrim?"),
-  preprocess_text("makanan favoritmu apa"),
-  preprocess_text("apa kamu suka eskrim")
-]
-
-labels += [
-  "favorit",
-  "favorit",
-  "favorit",
-  "favorit"
-]
+ 
 
 
 responses = {
@@ -44,9 +31,4 @@ responses = {
     "selamat tinggal": ["Sampai jumpa!", "Terima kasih sudah ngobrol!"]
 }
 
-
-responses["favorit"] = [
-  "Saya tidak makan eskrim, tapi saya suka ngobrol tentang itu!",
-  "Es krim memang enak ya!",
-  "Saya suka semua rasa eskrim."
-]
+ 
