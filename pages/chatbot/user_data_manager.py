@@ -6,11 +6,16 @@ from config import preprocess_text
 
 
 class UserDataManager:
-    def __init__(self, filepath='/pages/chatbot/user_training/user_data.json'):
+    def __init__(self, filepath=None):
+        if filepath is None:
+            # Path absolut dari file ini (user_data_manager.py)
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            # Menuju ke: pages/chatbot/user_training/user_data.json
+            filepath = os.path.join(base_dir, 'user_training', 'user_data.json')
+
         self.filepath = filepath
         self.ensure_folder_exists()
         self.user_data = self.load_user_data()
-        # Preprocess seluruh pertanyaan untuk pencarian konsisten
         self.user_data_proc = {
             preprocess_text(q): a for q, a in self.user_data.items()
         }
