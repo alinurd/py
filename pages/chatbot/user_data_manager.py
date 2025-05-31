@@ -5,7 +5,7 @@ import difflib
 from config import preprocess_text
 
 class UserDataManager:
-    def __init__(self, filepath='user_data.json'):
+    def __init__(self, filepath='user_training/user_data.json'):
         self.filepath = filepath
         self.user_data = self.load_user_data()
         # Buat versi preprocessed dari user_data untuk pencarian yang konsisten
