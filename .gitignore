@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.sqlite3
+user_training/user_data_ignore.json
